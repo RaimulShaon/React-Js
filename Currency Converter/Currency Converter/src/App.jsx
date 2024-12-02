@@ -28,7 +28,7 @@ const convertTo = () => {
    <div className='w-full h-screen flex justify-center items-center bg'>
     <div className='w-full'>
       <div><form action="" onSubmit={(e)=>{
-        e.preventDefault()
+        e.preventDefault()    //????
         convertTo()
       }}>
         <div className='w-full mb-1'>
@@ -40,7 +40,7 @@ const convertTo = () => {
           selctCurrency={from}
           onAmountCng={(amount)=>{
             setAmount(amount)
-          }}/>
+          }} />
         </div>
         <div className='relative w-full h-1'>
           <button className='bg-blue' type='button ' onClick={swap}>swap</button>
@@ -52,7 +52,7 @@ const convertTo = () => {
           onCurrencyOpt={options}
           onCurrencyCng={(currency) => setTo(currency)}
           selctCurrency={from}
-          amountDisable/>
+          amountDisable />
         </div>
         <button type='submit'>convert</button>
         </form>

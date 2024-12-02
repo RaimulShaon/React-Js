@@ -29,6 +29,12 @@ function App() {
   useEffect(()=> {passwordGenarator()}, [lenth, Number, Character, passwordGenarator])
   return (
     <>
+    <button
+          onClick={() => setColor("blue")}
+          className="outline-none px-4 py-1 rounded-full text-white shadow-lg"
+          style={{backgroundColor: "blue"}}
+          >Blue</button>
+          
       <h1 className='text-3xl font-bold underline bg-black text-emerald-500 p-2'>Password Genarator</h1>
       <div className='w-full p-6 my-4 max-w-md mx-auto text-orange-500 bg-gray-700 rounded-lg'>
         <div className='flex justify-between '>
