@@ -6,6 +6,7 @@ function App() {
   const [Number, setNumber ]= useState(false)
   const [Character, setCharacter]= useState(false)
   const [Password, setPassword] = useState("")
+  const [color, setColor] = useState("")
 
   const passRef = useRef(Password)
 
@@ -22,17 +23,20 @@ function App() {
   }, [lenth, Number, Character, setPassword])
 
   const copyPassword= useCallback(()=>{
-    passRef.current?.select(0, 10)
+    passRef.current?.select()
     window.navigator.clipboard.writeText(Password)
   }, [Password])
 
   useEffect(()=> {passwordGenarator()}, [lenth, Number, Character, passwordGenarator])
   return (
     <>
-    <button
-          onClick={() => setColor("blue")}
-          className="outline-none px-4 py-1 rounded-full text-white shadow-lg"
-          style={{backgroundColor: "blue"}}
+    <div className="w-full h-screen duration-200"
+    style={{backgroundColor: color}}
+    >
+    <button 
+          onClick={() => setColor("#7575a3")}
+          className="outline-none px-4 py-1 rounded-full text-white shadow-lg my-3"
+          style={{backgroundColor: "gray"}}
           >Blue</button>
           
       <h1 className='text-3xl font-bold underline bg-black text-emerald-500 p-2'>Password Genarator</h1>
@@ -59,6 +63,7 @@ function App() {
             <label >Charecter</label>
           </div>
         </div>
+      </div>
       </div>
     </>
   )

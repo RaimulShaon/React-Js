@@ -15,7 +15,7 @@ function InputBox({
   return (
    <div className= {`bg-white p-3 rounded-lg text-sm flex ${className}`}>
 <div className='w-1/2'>
-<label htmlFor={amountId}>{label}</label>
+<label htmlFor={amountId}  className="text-black/40 mb-2 inline-block">{label}</label>
 <input 
 id = {amountId}
 type="number" 
@@ -26,12 +26,13 @@ onChange = {(e)=> onAmountCng && onAmountCng(Number(e.target.value))}
  />
 </div>
 
-<div className='w-1/2 flex'>
-<p>Currency Type</p>
-<select value={selctCurrency}
+<div className='w-1/2 flex flex-wrap justify-end text-right'>
+<p className="text-black/40 mb-2 w-full">Currency Type</p>
+<select className="rounded-lg px-1 py-1 bg-gray-100 cursor-pointer outline-none"
+ value={selctCurrency}
 onChange={(e)=> onCurrencyCng && onCurrencyCng(e.target.value)}
 disabled = {currencyDisables}
- className='rounded-lg p-1 bg-gray-300'>
+>
 
 {onCurrencyOpt.map((currency)=>(
     <option key ={currency} value="usd">{currency}</option>

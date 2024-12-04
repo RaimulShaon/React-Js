@@ -38,7 +38,7 @@ export default function ContactUs() {
                                     />
                                 </svg>
                                 <div className="ml-4 text-md tracking-wide font-semibold w-40">
-                                    Acme Inc, Street, State, Postal Code
+                                    Hasan Manzil Ga-46, MiddleBadda, Dhaka, Dhaka-1212.
                                 </div>
                             </div>
 
@@ -60,7 +60,7 @@ export default function ContactUs() {
                                     />
                                 </svg>
                                 <div className="ml-4 text-md tracking-wide font-semibold w-40">
-                                    +44 1234567890
+                                    +8801782390200
                                 </div>
                             </div>
 
@@ -82,7 +82,7 @@ export default function ContactUs() {
                                     />
                                 </svg>
                                 <div className="ml-4 text-md tracking-wide font-semibold w-40">
-                                    info@acme.org
+                                    raimulhasan@gmal.com
                                 </div>
                             </div>
                         </div>
