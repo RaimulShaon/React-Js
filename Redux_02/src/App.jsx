@@ -4,13 +4,13 @@ import TotalCount from './Component/TotalCount';
 import { useDispatch, useSelector } from 'react-redux';
 import { decreament, increament } from './CounterSlice';
 
-const initState = [
-  { id: 1, value: 0 },
-  { id: 2, value: 0 },
-];
+// const initState = [
+//   { id: 1, value: 0 },
+//   { id: 2, value: 0 },
+// ];
 
 function App() {
-  const [counter, setCounter] = useState(initState);
+  // const [counter, setCounter] = useState(initState);
 
 const selector = useSelector((state)=>state.counterS)
 const dispatach = useDispatch()

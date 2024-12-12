@@ -14,9 +14,11 @@ function Todo() {
     };
 
     const handleUpdate = () => {
-        dispatch(updateTodo({ id: editId, text: editText }));
+        if (editId !== null && editText.trim() !== '') {
+            dispatch(updateTodo({ id: editId, text: editText })); // Dispatch the update action with the new text
+        }
         setEditId(null); // Exit edit mode
-        setEditText(''); // Clear the input
+        setEditText(''); // Clear the input field
     };
 
     return (
