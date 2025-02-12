@@ -51,7 +51,7 @@ const convertTo = () => {
           amount={convert}
           onCurrencyOpt={options}
           onCurrencyCng={(currency) => setTo(currency)}
-          selctCurrency={from}
+          selctCurrency={To}
           amountDisable />
         </div>
         <button type='submit'>convert</button>
