@@ -25,7 +25,7 @@ const {removeTodo, editTodo, toggleCheck} = useTodo()
                 type="checkbox"
                 className="cursor-pointer"
                 checked={todo.completed}
-                onChange={toggleCompleted}
+                onChange={togle}
             />
             <input
                 type="text"

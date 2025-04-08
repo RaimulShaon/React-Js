@@ -24,14 +24,14 @@ const toggleCheck = (id) => {
 }
 
 useEffect(()=>{
-  const todo = localStorage.getItem("todo")
+  const todo = JSON.parse(localStorage.getItem("todo"))
   if (todo) {
     setTodos(todo)  
   }
 }, [])
 
 useEffect(() =>{
-  const setTod = localStorage.setItem("todos", JSON.stringify(todos))
+   localStorage.setItem("todos", JSON.stringify(todos))
 }, [todos ])
 
   return (
